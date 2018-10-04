@@ -10,21 +10,24 @@
 	<!-- A linha abaixo "garante" o layout responsivo nos diversos dispositivos mobile -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link  rel="stylesheet" href="css/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	
 </head>
 <body>
 <div id="Main">
 	<!-- Cabeçalho -->
 	<header>
-		<img src="imagens/leesingif.gif" alt="html5 css3">
+		<img src="imagens/lucian1.jpg" alt="html5 css3">
 	</header>
 
 	<!-- menu -->
-	<nav>
+	<nav class="Menu">
+		<!-- &#9776 (desenho 3 linhas horizontais) -->
+		<a href="#" class="Mobile">&#9776 Menu</a>
 	<ul>
 		<li><a href="#">Home</a></li>
 		<li><a href="#">Sobre</a></li>
-		<li><a href="#">Conteúdo</a>
+		<li><a href="#" class="Detalhes">Conteúdo</a>
 		<ul>	
 			<li><a href="#">html</a></li>
 			<li><a href="#">css</a></li>
@@ -37,7 +40,7 @@
 
 	<!-- conteúdo -->
 	<section id="banner">
-		<img src="imagens/leesingif2.gif" alt="curso html5 css3">
+		<img src="imagens/projeto.jpg" alt="curso html5 css3">
     </section>
 
     <section id="heading">
@@ -46,17 +49,17 @@
 
     <section id="destaque">
      <!-- bloco -->
-     <img src="imagens/leesin1b.png" alt="Lee sin">
+     <img src="imagens/lucian256.jpg" alt="Lee sin">
      <h2>Destaque 1</h2>
      <p>lorem ipsum iorem ipsum </p>
      <a href="#">botão 1</a>
      <!-- bloco 2 -->
-     <img src="imagens/lee_sin.png" alt="Ult flash">
+     <img src="imagens/lucian.png" alt="Ult flash">
      <h2>Destaque 2</h2>
      <p>lorem ipsum iorem ipsum </p>
      <a href="#">botão 2</a>
      <!-- bloco 3 -->
-     <img src="imagens/muay_thai.png" alt="Skins do lee sin">
+     <img src="imagens/lucian 2.png" alt="Skins do lee sin">
      <h2>Destaque 3</h2>
      <p>lorem ipsum iorem ipsum </p>
      <a href="#">botão 3</a>
@@ -67,6 +70,8 @@
     	<p>©2018 - Lucas Soares</p>
     </footer>	
 </div>
+<script src="scripts/menuresponsivo.js"></script>
+<script src="scripts/fixamenu.js"></script>
 </body>
 	
 	

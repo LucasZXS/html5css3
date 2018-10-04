@@ -5,51 +5,100 @@
 * data 01/10/2018
 */
 
-
 body{
 	font-family: sans-serif;
 }
-nav{
+ nav {	
 	width: 100%;
-}
+} 
 nav ul{
 	list-style: none;
 	padding: 0px;
 	margin: 0px;
-	background-color: #000610;
-	overflow: hidden; /* completar a largura total com o background (formar o menu)*/
+	background-color:#000610;
+	overflow: hidden; /*completa a largura total com background*/
+
 }
 nav > ul > li{
-	float: left;
+	float:left;
+
 }
 nav ul li a{
 	text-decoration: none;
 	color: #ffffff;
 	padding: 15px;
-	display: block ;
+	display: block;
 }
 
 nav ul li a:hover{
-	background-color: #00bcff;
-	transition: all: 0.27s; /*efeito transição (0 a 1)*/
+	background-color:#00bcff;
+	transition: all 0.27s;
 }
 nav li ul{
 	display: none;
-}
-
-nav li:hover ul{
+} nav li:hover ul{
 	display: block;
 	position: absolute;
 }
+/**desenhando um triangulo no css*/
+.Detalhes:after{
 
-/* Desenhando um triângulo no css */
-.Detalhes: after{
-	content: ''; /* content: insere um conteudo no css */
-	color: #ff0000;
-	border: 5px solid transparent;
-	/*border-left-color: #ff0000;*/
-	/*border-right-color: #00ff00;*/
-	/*border-bottom-color: #0000ff;*/
-	border-top-color: #e8e8e8;
+ content:''; /*content:insere um conteudo no css*/
+ color:#ffffff;
+ border:6px solid transparent;
+ /*border-left-color: #ff0000;
+ border-right-color: #00ff00;*/
+ /*border-bottom-color: #0000ff;*/
+ border-top-color: #ffffff;
+ display:inline-block;
+ vertical-align: middle;
+}
+
+.Mobile{
+	display: none;
+}
+
+/* Classe usada pelo JS para fixar o menu */
+.Fixar{
+	position: fixed;
+	top 0 ;
+	z-index: 3;
+}
+
+
+/************Tratamento Responsivo **************/
+
+@media screen and (max-width: 480px){
+	body{
+		margin: 0px;
+	}
+
+.Mobile{
+	display: block;
+	background-color: #000616;
+	color: #ffffff;
+	text-decoration: none;
+	padding: 15px;
+}
+
+nav > ul > li{
+	float: none; 
+}
+
+nav ul{
+	width: 100%;
+	display: none;
+}
+
+nav ul li a:hover{
+	transition: all 0s; /* remover efeito de transição */
+}
+
+nav li ul li{
+	background-color: #044364;
+}
 
 }
+
+
+

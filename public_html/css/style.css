@@ -9,7 +9,7 @@
 /************ Principal ****************/
 body{
 	font-family: 'Open Sans', sans-serif;
-	background-image: url("../imagens/textura.png");
+	background-image: url("../imagens/textura.jpg");
 	background-attachment: fixed; /* ficha o background*/
 	/*background-size: cover; /*manter o tamanho da imagem de forma responsiva */
 	font-size: 1em; /* 1em = 1px */
@@ -23,5 +23,98 @@ body{
 /***************** Tratamento responsivo *************/
 
 img{
-	max-width: 100%; /* Todas as imagens do site ficam responsivas
+	max-width: 100%; /* Todas as imagens do site ficam responsivas*/
+}
+
+nav ul{
+	list-style: none;
+	padding: 0px;
+	margin: -5px;
+	background-color:#000000;
+	overflow: hidden; /*completa a largura total com background*/
+
+}
+nav ul li{
+	float:left ;
+	width: 25%;
+	
+}
+
+nav ul li a{
+	text-decoration: none;
+	color: #ffffff;
+	padding: 15px;
+	display: block;
+	text-align: center;
+}
+
+nav ul li a:hover{
+	background-color:#00bcff;
+	transition: all 0.27s;
+}
+nav li ul{
+	display: none;
+} nav li:hover ul{
+	display: block;
+	position: absolute;
+}
+
+/**desenhando um triangulo no css*/
+.Detalhes:after{
+
+ content:''; /*content:insere um conteudo no css*/
+ color:#ffffff;
+ border:6px solid transparent;
+ /*border-left-color: #ff0000;
+ border-right-color: #00ff00;*/
+ /*border-bottom-color: #0000ff;*/
+ border-top-color: #ffffff;
+ display:inline-block;
+ vertical-align: middle;
+}
+
+.Mobile{
+	display: none;
+}
+
+/* Classe usada pelo JS para fixar o menu */
+.Fixar{
+	position: fixed;
+	top : 0;
+	z-index: 3;
+	
+
+}
+
+@media screen and (max-width: 480px){
+	body{
+		margin: 0px;
+	}
+
+.Mobile{
+	display: block;
+	background-color: #000616;
+	color: #ffffff;
+	text-decoration: none;
+	padding: 15px;
+	margin: -5px;
+}
+
+nav > ul > li{
+	float: none; 
+}
+
+nav ul{
+	width: 100%;
+	display: none;
+}
+
+nav ul li a:hover{
+	transition: all 0s; /* remover efeito de transição */
+}
+
+nav li ul li{
+	background-color: #044364;
+}
+
 }
