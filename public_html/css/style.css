@@ -1,27 +1,296 @@
-/**
-* Folha de estilo principal de site html5 + css3
-* @author Lucas Soares
+/*
+ Folha de estilo principal do site html5 + css3
+ @author Vitor Zelli
 */
 
-/************ Importando font ************/
+/****************** Importando font ******************/
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:700');
 
-/************ Principal ****************/
+/* Principal */
 body{
-	font-family: 'Open Sans', sans-serif;
-	background-image: url("../imagens/textura.png");
-	background-attachment: fixed; /* ficha o background*/
-	/*background-size: cover; /*manter o tamanho da imagem de forma responsiva */
-	font-size: 1em; /* 1em = 1px */
+	font-family: 'Open Sans'; sans-serif;
+	background-color: #fff; 
+	background-image: url("../imagens/back1.jpg");
+	background-attachment: fixed; /* fixa o background */
+	background-size: cover; /* manter o tamanho de forma responsiva */
+	font-size: 1em; /*1 em = 16px */
 }
-#Main{
+
+#main{
 	max-width: 1024px;
-	background-color: #ffffff;
-	margin: 0 auto; /*centralizar a div */
+	/* background-color:#ffffff; */
+	margin: 0 auto; /* centralizar a div */
+	margin-top: 50px; /*box model*/
 }
 
-/***************** Tratamento responsivo *************/
-
-img{
-	max-width: 100%; /* Todas as imagens do site ficam responsivas
+#contato{
+	color#ffffff;
 }
+
+/************** Cabeçalho ***************/
+
+header{
+	width: 100%;
+	/*  background-color: #ffff00;  dica para ajustar elementos */
+
+}
+
+header img{
+	/* width: 200px;
+	height: 200px;
+	margin-left:400px; */
+
+}
+
+
+/**** menu ****/
+
+img {
+	max-width: 100%; /* todas as imagens do site ficam responsiva */
+}
+/*********** MENU RESPONSIVO ***********/
+nav{
+	width: 100%;
+	max-width: 1024px;
+	position: absolute;
+	z-index: 3;
+}
+
+nav ul{
+	list-style: none;
+	padding: 0px;
+	margin: 0px;
+	background-color: #ff0000;
+	/*overflow: hidden;  completar a largura total com o background (formar o menu)*/
+}
+
+nav > ul > li{
+	float: left;
+	width: 25%; /* 4 elementos do menu primário */
+}
+nav > ul > li > a{
+	font-size: 1.125em;
+}
+nav ul li a{
+	background-color: #ff0000;
+	text-decoration: none;
+	color: #FFF0F5;
+	padding: 15px;
+	display: block;
+	text-align:center;
+}
+nav ul li a{
+	background-color: #228B22;
+	text-decoration: none;
+	color: #FFF0F5;
+	padding: 15px;
+	display: block;
+	text-align: center;
+	}
+
+nav ul li a:hover{
+	background-color: #32CD32;
+	transition: all 0.27s; /* efeito transição (0 a 1) */
+}
+
+nav li ul{
+	display: none;
+}
+
+nav li:hover ul{
+	display: block;
+}
+
+/* Desenhando um triângulo no css */
+
+
+.Detalhes:after{ /* Atributo after (após o conteudo)*/
+	content:''; /* Content: insere um conteudo no css */
+	color: #FFFFFF;
+	border: 5px solid transparent;
+	/* border-left-color: #800000;
+	border-right-color: #800000;
+	border-bottom-color: #FF69B4; */
+	border-top-color: #FFF0F5; 
+	/* Alinhamento */
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.Mobile{
+	display: none;
+}
+/* Classe usada pelo JS para fixar o menu */
+.Fixar{
+	position: fixed;
+	top: 0;
+	
+}
+
+/*** banner ***/
+#banner{
+	margin-top: 75px;
+	max-width: 1024px;
+	height: 350px;
+	/** usado pra flexibilar o layout */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#banner img{
+	filter: brightness(40%);
+}
+#banner	h1{
+	position: absolute;
+	color: #ffffff;
+	margin: 0;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 2.7em;
+	text-transform: uppercase; /*maiusculo*/
+}
+/* mudar a cor do sub-titulo pra branco */
+#destaque h2{
+	color: #ffffff;
+}
+/* muda a cor do contexto pra branco (texto q vem depois do sub-titulo) */
+#destaque p{
+	color: #ffffff;
+}
+
+/***heading ***/
+#heading{
+	width: 80%;
+	color: #ffffff;
+	margin: 0 auto;
+	padding: 35px;
+}
+
+
+#heading{
+	text-align: center;
+	font-weight: 400;
+}
+
+	/***** RODAPÉ *****/
+	footer{
+		width: 100%;
+		background-color: #228B22;
+		margin-top: 50px;
+		padding-top: 3px;
+		padding-bottom: 3px;
+		text-align: center;
+		color: #ffffff;
+		font-size: 0.75em;
+
+	}
+
+	/*FORMULÁRIO DE CONTATO*/
+#contato{
+	padding-top: 80px;
+	width: 70%;
+	margin: 0 auto;
+}
+
+#contato input[type=text]{
+	width: 100%;
+	padding: 10px;
+	border-radius: 5px;
+	border: 1px solid #044364;
+	margin-bottom: 20px;
+	
+}
+
+#contato textarea{
+	width: 100%;
+	padding: 10px 10px 10px 10px;
+	border-radius: 5px;
+	border: 1px solid #044364;
+	margin-bottom: 20px;
+	resize: none;
+	
+}
+
+#contato input[type=submit]{
+	background-color: #044364;
+	color: #ffffff;
+	border-radius: 1px;
+	border:1px solid #000000;
+	padding: 10px 25px 10px 25px;
+}
+
+
+/***** Tratamento responsivo ********/
+
+/**** menu mobile ****/
+
+@media screen and (max-width: 480px){
+	body{
+		margin: 0px;
+	}
+#main{ 
+	margin-top: 0px;
+}
+	/*** cabeçalho ***/
+
+	header{
+ 	text-align: center;
+ 	margin-bottom: 0px;
+ 	}
+
+ 	 header img {
+ 	margin-top: 0px;
+ 	margin-left: 0px;
+ }
+	/* menu hamburguer */
+	.Mobile{
+		display: block;
+		background-color: #228B22;
+		color: #FFF0F5;
+		text-decoration: none;
+		padding: 15px;
+}
+	nav > ul > li{
+	float: none;
+	width: 100%;
+	}
+
+	nav ul{
+	width: 100%;
+	display: none;
+	}
+
+    nav ul li a{
+		font-size: 0.875em;
+		padding: 12px;
+		text-align: left;
+	}         
+
+	nav ul li a:hover{
+		transition: all 0s; /* remover efeito de transição */
+
+	}
+	nav li ul li{
+		background-color: #000000;
+	}
+
+	nav li  ul li a{
+		background-color:#000000;
+		padding-left: 40px;
+	}
+
+	/*** IMPORTANTE para UX no dispositivo mobile, não exibir o 2º nivel do menu enquanto o conteudo
+	não for clicado **/
+	nav li:hover ul{
+		display: none; 
+	}
+}
+
+	.heading2{
+		font-size: 0.85em;
+		text-align: center;
+	}
+	.heading3{
+		font-size: 0.75em;
+	}
