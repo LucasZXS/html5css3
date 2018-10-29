@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /*
  Folha de estilo principal do site html5 + css3
  @author Lucas Soares
@@ -56,40 +55,11 @@ nav{
 	max-width: 1024px;
 	position: absolute;
 	z-index: 3;
-=======
-/**
-* Folha de estilo principal de site html5 + css3
-* @author Lucas Soares
-*/
-
-/************ Importando font ************/
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
-
-/************ Principal ****************/
-body{
-	font-family: 'Open Sans', sans-serif;
-	background-image: url("../imagens/textura.jpg");
-	background-attachment: fixed; /* ficha o background*/
-	/*background-size: cover; /*manter o tamanho da imagem de forma responsiva */
-	font-size: 1em; /* 1em = 1px */
-}
-#Main{
-	max-width: 1024px;
-	background-color: #ffffff;
-	margin: 0 auto; /*centralizar a div */
-}
-
-/***************** Tratamento responsivo *************/
-
-img{
-	max-width: 100%; /* Todas as imagens do site ficam responsivas*/
->>>>>>> 0a3abffcc84013ae38390e372d5f1d77f3e7a646
 }
 
 nav ul{
 	list-style: none;
 	padding: 0px;
-<<<<<<< HEAD
 	margin: 0px;
 	background-color: #ff0000;
 	/*overflow: hidden;  completar a largura total com o background (formar o menu)*/
@@ -146,56 +116,11 @@ nav li:hover ul{
 	/* Alinhamento */
 	display: inline-block;
 	vertical-align: middle;
-=======
-	margin: -5px;
-	background-color:#000000;
-	overflow: hidden; /*completa a largura total com background*/
-
-}
-nav ul li{
-	float:left ;
-	width: 25%;
-	
-}
-
-nav ul li a{
-	text-decoration: none;
-	color: #ffffff;
-	padding: 15px;
-	display: block;
-	text-align: center;
-}
-
-nav ul li a:hover{
-	background-color:#00bcff;
-	transition: all 0.27s;
-}
-nav li ul{
-	display: none;
-} nav li:hover ul{
-	display: block;
-	position: absolute;
-}
-
-/**desenhando um triangulo no css*/
-.Detalhes:after{
-
- content:''; /*content:insere um conteudo no css*/
- color:#ffffff;
- border:6px solid transparent;
- /*border-left-color: #ff0000;
- border-right-color: #00ff00;*/
- /*border-bottom-color: #0000ff;*/
- border-top-color: #ffffff;
- display:inline-block;
- vertical-align: middle;
->>>>>>> 0a3abffcc84013ae38390e372d5f1d77f3e7a646
 }
 
 .Mobile{
 	display: none;
 }
-<<<<<<< HEAD
 /* Classe usada pelo JS para fixar o menu */
 .Fixar{
 	position: fixed;
@@ -261,6 +186,36 @@ nav li ul{
 
 	}
 
+/********** blocos **************/
+#destaque{
+	max-width: 1024px;
+	height: 320px;
+}
+.blocos{
+	width: 30.76%;
+	height: 320px;
+	background-color: #ffff00;
+	float: left;
+	margin-left: 1.75%; /* (20px/1024px) */
+	border: 1px solid #dedede;
+	text-align: center;
+	position: relative; /*posicionamento do botão */
+	background-color: #228B22;
+}
+.blocos a{
+	width: 80px;
+	padding: 10px 0px 10px 0px;
+	display: block;
+	background-color: #000000;
+	color: #ffffff;
+	text-decoration: none;
+	font-size: 0.875em;
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+
+}
+
 	/*FORMULÁRIO DE CONTATO*/
 #contato{
 	padding-top: 80px;
@@ -300,31 +255,112 @@ nav li ul{
 
 /**** menu mobile ****/
 
-=======
 
-/* Classe usada pelo JS para fixar o menu */
-.Fixar{
-	position: fixed;
-	top : 0;
-	z-index: 3;
+/********** pt3 *********/
+@media screen and (max-width: 934px){
 	
+#banner{
+	margin-top: 19px;
+}
+@media screen and (max-width: 932px){
+	
+#banner{
+	margin-top: 19px;
+}
+@media screen and (max-width: 929px){
+	
+#banner{
+	margin-top: 19px;
+}
+@media screen and (max-width: 920px){
+	
+#banner{
+	margin-top: 17px;
+}
+@media screen and (max-width: 911px){
+	
+#banner{
+	margin-top: 15px;
+}
+
+/********** pt3 *********/
+@media screen and (max-width: 852px){
+	
+#banner{
+	margin-top: 10px;
+}
+@media screen and (max-width: 849px){
+	
+#banner{
+	margin-top: 10px;
+}
+@media screen and (max-width: 841px){
+	
+#banner{
+	margin-top: 10px;
+}
+/***** 2° ponto de quebra ******/
+@media screen and (max-width: 792px){
+	#banner{
+		margin-top: 0px;
+		
+	}
+
+}
+@media screen and (max-width: 791px){
+	#banner{
+		margin-top: 0px;
+		
+	}
+
+}
+@media screen and (max-width: 786px){
+	#banner{
+		margin-top: 0px;
+		
+	}
 
 }
 
->>>>>>> 0a3abffcc84013ae38390e372d5f1d77f3e7a646
-@media screen and (max-width: 480px){
-	body{
-		margin: 0px;
+/***** 3° ponto de quebra ******/
+@media screen and (max-width: 622px){
+	#banner{
+		margin-top: -20px;
+		
 	}
-<<<<<<< HEAD
-#main{ 
-	margin-top: 0px;
+
+}
+
+/***** 4° ponto de quebra ******/
+@media screen and (max-width: 620px){
+	#banner{
+		margin-top: -45px;
+		font-size: 0.550em;
+	}
+}
+@media screen and (max-width: 501px){
+	
+#banner{
+	margin-top: -45px;
+	font-size: 0.550em;
+}
+@media screen and (max-width: 480px){
+	
+#banner{
+	margin-top: -45px;
+}
+/********** pt2 *********/
+@media screen and (max-width: 488px){
+	
+#banner{
+	margin-top: -45px;
 }
 	/*** cabeçalho ***/
 
 	header{
  	text-align: center;
  	margin-bottom: 0px;
+
  	}
 
  	 header img {
@@ -375,40 +411,12 @@ nav li ul{
 	}
 }
 
+
 	.heading2{
 		font-size: 0.85em;
 		text-align: center;
+
 	}
 	.heading3{
 		font-size: 0.75em;
 	}
-=======
-
-.Mobile{
-	display: block;
-	background-color: #000616;
-	color: #ffffff;
-	text-decoration: none;
-	padding: 15px;
-	margin: -5px;
-}
-
-nav > ul > li{
-	float: none; 
-}
-
-nav ul{
-	width: 100%;
-	display: none;
-}
-
-nav ul li a:hover{
-	transition: all 0s; /* remover efeito de transição */
-}
-
-nav li ul li{
-	background-color: #044364;
-}
-
-}
->>>>>>> 0a3abffcc84013ae38390e372d5f1d77f3e7a646
